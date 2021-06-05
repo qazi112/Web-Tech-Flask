@@ -47,6 +47,7 @@ def list():
    cur.execute("select * from students")
    
    rows = cur.fetchall(); 
+   breakpoint()
    return render_template("list.html",rows = rows)
 
 
@@ -57,3 +58,15 @@ def home():
 
 if __name__ == '__main__':
    app.run(debug = True)
+
+
+#### create table 
+
+# import sqlite3
+
+# conn = sqlite3.connect('database.db')
+# print "Opened database successfully";
+
+# conn.execute('CREATE TABLE students (name TEXT, addr TEXT, city TEXT, pin TEXT)')
+# print "Table created successfully";
+# conn.close()
