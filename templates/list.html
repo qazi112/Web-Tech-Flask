@@ -12,7 +12,7 @@
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">Data Base Example</a>
+                <a class="navbar-brand" href="#">DataBase Example</a>
             </div>
             <ul class="nav navbar-nav">
                 <li class="active"><a href="/">Home</a></li>
@@ -26,8 +26,22 @@
         </div>
     </nav>
     <div class="container-fluid">
-        <h2>Database Example</h2>
+        <table class="table table-bordered">
+            <thead>
+               <td>Name</td>
+               <td>Address</td>
+               <td>city</td>
+               <td>Pincode</td>
+            </thead>
+            
+            {% for row in rows %}
+               <tr>
+                  <td>{{row["name"]}}</td>
+                  <td>{{row["addr"]}}</td>
+                  <td> {{ row["city"]}}</td>
+                  <td>{{row['pin']}}</td>	
+               </tr>
+            {% endfor %}
+        </table>
     </div>
 </body>
-
-</html>

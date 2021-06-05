@@ -26,8 +26,25 @@
         </div>
     </nav>
     <div class="container-fluid">
-        <h2>Database Example</h2>
+      <form class="form-group" action = "{{ url_for('addrec') }}" method = "POST">
+         <div class="form-group">
+            <label for="email">Name</label>
+            <input type = "text" name = "nm" />
+         </div>
+         <div class="form-group">
+            <label for="email">Address</label>
+            <textarea name = "add" ></textarea>
+         </div>
+         <div class="form-group">
+            <label for="email">City</label>
+            <input type = "text" name = "city" />
+         </div>
+         <div class="form-group">
+            <label for="email">Pin</label>
+            <input type = "text" name = "pin" />
+         </div>
+         <input type = "submit" value = "submit" />         
+      </form>
     </div>
 </body>
-
 </html>
