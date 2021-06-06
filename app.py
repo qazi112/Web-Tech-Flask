@@ -39,6 +39,7 @@ def addrec():
 
 
 @app.route('/list')
+
 def list():
    con = sql.connect("database.db")
    con.row_factory = sql.Row
@@ -47,17 +48,17 @@ def list():
    cur.execute("select * from students")
    
    rows = cur.fetchall(); 
-   breakpoint()
+  
    return render_template("list.html",rows = rows)
 
 
 @app.route('/')
 def home():
-   return render_template('home.html')
+   return render_template("home.html")
 
 
 if __name__ == '__main__':
-   app.run(debug = True)
+   app.run(debug = True,host="127.0.0.1",port=5051)
 
 
 #### create table 
