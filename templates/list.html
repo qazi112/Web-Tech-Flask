@@ -28,18 +28,22 @@
     <div class="container-fluid">
         <table class="table table-bordered">
             <thead>
+                <td>Id</td>
                <td>Name</td>
                <td>Address</td>
                <td>city</td>
                <td>Pincode</td>
+               <td>Action</td> 
             </thead>
             
             {% for row in rows %}
                <tr>
-                  <td>{{row["name"]}}</td>
+                   <td>{{row["s_id"]}}</td>
+                  <td>{{row["s_name"]}}</td>
                   <td>{{row["addr"]}}</td>
                   <td> {{ row["city"]}}</td>
-                  <td>{{row['pin']}}</td>	
+                  <td>{{row['pincode']}}</td>
+                  <td> <a href ="/delete/{{row['s_id']}}" >Delete</a></td>	
                </tr>
             {% endfor %}
         </table>
